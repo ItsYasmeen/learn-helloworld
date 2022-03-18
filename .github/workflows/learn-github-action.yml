@@ -33,4 +33,4 @@ jobs:
           # Used to pull python distributions from actions/python-versions. Since there's a default, this is typically not supplied by the user.
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: python3 main.py
+        run: python3 test.py
