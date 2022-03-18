@@ -24,7 +24,13 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-
+      - name: Setup Python
+        uses: actions/setup-python@v3.0.0
+        with:
+          # Version range or exact version of a Python version to use, using SemVer's version range syntax.
+          python-version: 3
+          # Used to specify a package manager for caching in the default directory. Supported values: pip, pipenv.
+          # Used to pull python distributions from actions/python-versions. Since there's a default, this is typically not supplied by the user.
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: python3 main.py
